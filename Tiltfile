@@ -2,6 +2,11 @@ SOURCE_IMAGE = os.getenv("SOURCE_IMAGE", default='dev.localjng/tanzu-java-web-ap
 LOCAL_PATH = os.getenv("LOCAL_PATH", default='.')
 NAMESPACE = os.getenv("NAMESPACE", default='default')
 
+allow_k8s_contexts('cltest2')
+SOURCE_IMAGE = 'jngacr3.azurecr.io/tap1.1.0/appsrcs/tanzu-java-web-app'
+LOCAL_PATH = '/Users/jnagel/jng/app/ztestsjng/tests_TAP/w2/tanzu-java-web-app'
+NAMESPACE = 'envt-dev'
+
 k8s_custom_deploy(
     'tanzu-java-web-app',
     apply_cmd="tanzu apps workload apply -f config/workload.yaml --live-update" +
