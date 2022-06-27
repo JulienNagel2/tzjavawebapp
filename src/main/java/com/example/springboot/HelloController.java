@@ -8,9 +8,9 @@ public class HelloController {
 
 	@RequestMapping("/")
 	public String index() {
-		String monstring = "exemple111";
-		System.out.println("JNG msg for v2.7 : " + monstring);
-		return "Greetings from Spring Boot + Tanzu + JNG v2.7 : " + monstring;
+		String monmot = "what a wonderful world of containers";
+		System.out.println("JNG msg for v2.8 : " + monmot);
+		return "Greetings from Spring Boot + Tanzu + JNG v2.8 : " + monmot;
 	}
 
 }
